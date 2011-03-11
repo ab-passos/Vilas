@@ -1,0 +1,23 @@
+<h1>Listagem de familias</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @familia.each do |familium| %>
+  <tr>
+    <td><%= familium.nome %></td>
+    <td><%= link_to 'Mostrar', familium %></td>
+    <td><%= link_to 'Editar', edit_familium_path(familium) %></td>
+    <td><%= link_to 'Eliminar', familium, :confirm => 'Tem a certeza que deseja eliminar esta familia?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nova Familia', new_familium_path %>

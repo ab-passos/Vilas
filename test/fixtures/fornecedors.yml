@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  morada: MyText
+  localidade: MyString
+  numeroContribuinte: 1
+  descricao: MyText
+
+two:
+  nome: MyString
+  morada: MyText
+  localidade: MyString
+  numeroContribuinte: 1
+  descricao: MyText

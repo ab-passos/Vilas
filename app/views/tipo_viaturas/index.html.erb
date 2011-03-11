@@ -1,0 +1,23 @@
+<h1>Listing tipo_viaturas</h1>
+
+<table>
+  <tr>
+    <th>Tipoviatura</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipo_viaturas.each do |tipo_viatura| %>
+  <tr>
+    <td><%= tipo_viatura.tipoViatura %></td>
+    <td><%= link_to 'Show', tipo_viatura %></td>
+    <td><%= link_to 'Edit', edit_tipo_viatura_path(tipo_viatura) %></td>
+    <td><%= link_to 'Destroy', tipo_viatura, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tipo viatura', new_tipo_viatura_path %>

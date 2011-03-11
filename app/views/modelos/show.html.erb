@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Marca:</b>
+  <%= @modelo.marca.nome %>
+</p>
+
+<p>
+  <b>Modelo:</b>
+  <%= @modelo.modelo %>
+</p>
+
+<p>
+  <b>Cilindrada:</b>
+  <%= @modelo.cilindrada %>
+</p>
+
+<p>
+  <b>Nmotor:</b>
+  <%= @modelo.nMotor %>
+</p>
+
+<p>
+  <b>Tipoviatura:</b>
+  <%= @modelo.tipoViatura.tipoViatura %>
+</p>
+
+<p>
+  <b>Combustivel:</b>
+  <%= @modelo.combustivel.tipoCombustivel %>
+</p>
+
+<p>
+  <b>Cavalagem:</b>
+  <%= @modelo.cavalagem %>
+</p>
+
+<p>
+  <b>Anoinicial:</b>
+  <%= @modelo.anoInicial %>
+</p>
+
+<p>
+  <b>Anofinal:</b>
+  <%= @modelo.anoFinal %>
+</p>
+
+
+<%= link_to 'Edit', edit_modelo_path(@modelo) %> |
+<%= link_to 'Back', modelos_path %>

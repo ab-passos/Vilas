@@ -1,0 +1,57 @@
+<%= form_for(@modelo) do |f| %>
+  <% if @modelo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@modelo.errors.count, "error") %> prohibited this modelo from being saved:</h2>
+
+      <ul>
+      <% @modelo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :marca_id %><br />
+    <%= f.select(:marca_id, Marca.find(:all).collect {|s| [ 
+				s.nome, s.id ] }, { :prompt => "Seleccione a marca" }) %>
+
+  </div>
+  <div class="field">
+    <%= f.label :modelo %><br />
+    <%= f.text_field :modelo %>
+  </div>
+  <div class="field">
+    <%= f.label :cilindrada %><br />
+    <%= f.text_field :cilindrada %>
+  </div>
+  <div class="field">
+    <%= f.label :nMotor %><br />
+    <%= f.text_field :nMotor %>
+  </div>
+  <div class="field">
+    <%= f.label :tipoViatura_id %><br />
+    <%= f.select(:tipoViatura_id, TipoViatura.find(:all).collect {|s| [ 
+				s.tipoViatura, s.id ] }, { :prompt => "Seleccione o tipo de viatura"}) %>
+  </div>
+  <div class="field">
+    <%= f.label :combustivel_id %><br />
+    <%= f.select(:combustivel_id, Combustivel.find(:all).collect {|s| [ 
+				s.tipoCombustivel, s.id ] }, { :prompt => "Seleccione o tipo de combustivel"}) %>
+  </div>
+  <div class="field">
+    <%= f.label :cavalagem %><br />
+    <%= f.text_field :cavalagem %>
+  </div>
+  <div class="field">
+    <%= f.label :anoInicial %><br />
+    <%= f.text_field :anoInicial %>
+  </div>
+  <div class="field">
+    <%= f.label :anoFinal %><br />
+    <%= f.text_field :anoFinal %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

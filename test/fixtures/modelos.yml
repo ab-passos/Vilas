@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  marca_id: 1
+  modelo: MyString
+  cilindrada: 1
+  nMotor: MyString
+  tipoViatura_id: 1
+  combustivel_id: 1
+  cavalagem: 1
+  anoInicial: 1
+  anoFinal: 1
+
+two:
+  marca_id: 1
+  modelo: MyString
+  cilindrada: 1
+  nMotor: MyString
+  tipoViatura_id: 1
+  combustivel_id: 1
+  cavalagem: 1
+  anoInicial: 1
+  anoFinal: 1

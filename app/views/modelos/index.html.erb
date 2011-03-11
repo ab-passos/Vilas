@@ -1,0 +1,39 @@
+<h1>Listing modelos</h1>
+
+<table>
+  <tr>
+    <th>Marca</th>
+    <th>Modelo</th>
+    <th>Cilindrada</th>
+    <th>Nmotor</th>
+    <th>Tipoviatura</th>
+    <th>Combustivel</th>
+    <th>Cavalagem</th>
+    <th>Anoinicial</th>
+    <th>Anofinal</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @modelos.each do |modelo| %>
+  <tr>
+    <td><%= modelo.marca.nome %></td>
+    <td><%= modelo.modelo %></td>
+    <td><%= modelo.cilindrada %></td>
+    <td><%= modelo.nMotor %></td>
+    <td><%= modelo.tipoViatura.tipoViatura %></td>
+    <td><%= modelo.combustivel.tipoCombustivel %></td>
+    <td><%= modelo.cavalagem %></td>
+    <td><%= modelo.anoInicial %></td>
+    <td><%= modelo.anoFinal %></td>
+    <td><%= link_to 'Show', modelo %></td>
+    <td><%= link_to 'Edit', edit_modelo_path(modelo) %></td>
+    <td><%= link_to 'Destroy', modelo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Modelo', new_modelo_path %>
